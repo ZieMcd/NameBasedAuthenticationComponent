@@ -1,0 +1,31 @@
+@page "/Profile"
+<AuthorizeView >
+    <Authorized>
+        <h3>Profile</h3>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var claim in context.User.Claims)
+            {
+                <tr>
+                    <td>@claim.Type</td>
+                    <td>@claim.Value</td>
+                </tr>
+            }
+            @context.User.
+            </tbody>
+        </table>
+    </Authorized>
+    <NotAuthorized>
+        You are not signed in!
+    </NotAuthorized>
+    <Authorizing>
+        Authorizing
+    </Authorizing>
+</AuthorizeView>

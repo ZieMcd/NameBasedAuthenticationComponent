@@ -1,0 +1,37 @@
+@page "/NamedComponents"
+<NameBasedAuthorizeView ComponentAuthName="AdminComponent">
+    <Authorized>
+        <div class="card text-white bg-success  mb-3" style="max-width: 18rem;">
+            <div class="card-header">Authorized</div>
+            <div class="card-body">
+                <p class="card-text">You are Authorized to view Admin Component</p>
+            </div>
+        </div>
+    </Authorized>
+    <NotAuthorized>
+        <div class="card text-white bg-danger  mb-3" style="max-width: 18rem;">
+            <div class="card-header">UnAuthorized</div>
+            <div class="card-body">
+                <p class="card-text">You are Not Authorized to view Admin Component</p>
+            </div>
+        </div>
+    </NotAuthorized>
+</NameBasedAuthorizeView>
+<NameBasedAuthorizeView ComponentAuthName="EveryoneComponent">
+    <Authorized>
+        <div class="card text-white bg-success  mb-3" style="max-width: 18rem;">
+            <div class="card-header">Authorized</div>
+            <div class="card-body">
+                <p class="card-text">You are Authorized to view Admin EveryoneComponent</p>
+            </div>
+        </div>
+    </Authorized>
+    <NotAuthorized>
+        <div class="card text-white bg-danger  mb-3" style="max-width: 18rem;">
+            <div class="card-header">UnAuthorized</div>
+            <div class="card-body">
+                <p class="card-text">You are Not Authorized to view EveryoneComponent</p>
+            </div>
+        </div>
+    </NotAuthorized>
+</NameBasedAuthorizeView>
