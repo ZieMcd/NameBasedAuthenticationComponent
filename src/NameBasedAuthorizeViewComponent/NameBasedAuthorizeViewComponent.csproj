@@ -4,6 +4,14 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <PackageId>Ziemcd.Authorization.NameBasedAuthorizeViewComponent</PackageId>
+        <Title>NameBasedAuthorizeViewComponent</Title>
+        <Authors>Zie/Izak McDowell</Authors>
+        <Description>NameBasedAuthorizeView is an alternative to Microsoft's AuthorizeView. It allows you to implement what roles should see what components based on there name.</Description>
+        <Copyright>GNU</Copyright>
+        <PackageIconUrl>https://www.clipartmax.com/png/full/211-2118696_purple-lock-icon.png</PackageIconUrl>
+        <RepositoryUrl>https://github.com/ZieMcd/NameBasedAuthenticationComponent</RepositoryUrl>
+        <PackageTags>Blazor, Authorization</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
