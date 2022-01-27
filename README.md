@@ -2,16 +2,14 @@
 NameBasedAuthorizeView is an alternative to Microsoft's AuthorizeView. It allows for even more control over what roles can access a component.
 
 ### Before We begin
-I assume that you already have a basic understanding of authentication and authorization in dotnet and blazor when using this nuget if not I recommend reading the microsoft docs https://docs.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-6.0\
+I assume that you already have a basic understanding of authentication and authorization in dotnet and blazor when using this nuget if not I recommend reading the [microsoft docs](https://docs.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-6.0\).
 I also recommend reading the documentation on Microsoft's [AuthorizeView component](https://docs.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-6.0#authorizeview-component) which this component is based off of.  
 
-If you dont what Authentication provider to I recommend [okta](https://developer.okta.com/). \
-[this](https://www.youtube.com/watch?v=GilJ29cPJAs&ab_channel=OktaDev) video is good for showing how to set up okta in blazor project \
-around 13 mins into [this](https://youtu.be/Cej_u3fb9rI?t=783) video shows you how to get role claim from okta
+If you dont know what Authentication provider to use I recommend [okta](https://developer.okta.com/). \
+[Here is good](https://www.youtube.com/watch?v=GilJ29cPJAs&ab_channel=OktaDev) video is good for showing how to set up okta in blazor project. \
+Around 13 mins into [this](https://youtu.be/Cej_u3fb9rI?t=783) video it shows you how to get role claim from okta
 
 ## Installation
-
-
 
 PMC:
 
@@ -43,7 +41,7 @@ INameBasedAuthorizationHelper.cs
 
         /// <summary>
         /// This class is used by the NameBasedAuthorizeView component
-        /// This Class has two methods, GetRolesForComponent and GetRolesFromRoute
+        /// This class has two methods, GetRolesForComponent and GetRolesFromRoute
         /// both should return a comma delimited list of roles that are allowed to access the component.
         /// If a component name has been passed to the NameBasedAuthorizeView e.g. <NameBasedAuthorizeView ComponentAuthName="AdminComponent"> then
         /// the GetRolesForComponent(string componentName) will be called if no parameter is passed in e.g. just <NameBasedAuthorizeView> then

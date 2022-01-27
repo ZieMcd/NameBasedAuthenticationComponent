@@ -2,7 +2,7 @@ namespace NameBasedAuthorizeViewComponent.Interfaces;
 
 /// <summary>
 /// This class is used by the NameBasedAuthorizeView component 
-/// This Class has two methods, GetRolesForComponent and GetRolesFromRoute
+/// This class has two methods, GetRolesForComponent and GetRolesFromRoute
 /// both should return a comma delimited list of roles that are allowed to access the component.
 /// If a component name has been passed to the NameBasedAuthorizeView e.g. <NameBasedAuthorizeView ComponentAuthName="AdminComponent"> then
 /// the GetRolesForComponent(string componentName) will be called if no parameter is passed in e.g. just <NameBasedAuthorizeView> then
