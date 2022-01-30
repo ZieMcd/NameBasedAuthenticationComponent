@@ -2,7 +2,7 @@
 NameBasedAuthorizeView is an alternative to Microsoft's AuthorizeView. It allows for even more control over what roles can access a component.
 
 ### Before We begin
-I assume that you already have a basic understanding of authentication and authorization in dotnet and blazor when using this nuget if not I recommend reading the [microsoft docs](https://docs.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-6.0\).
+I assume that you already have a basic understanding of authentication and authorization in dotnet and blazor when using this nuget if not I recommend reading the [microsoft docs}(https://docs.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-6.0\).
 I also recommend reading the documentation on Microsoft's [AuthorizeView component](https://docs.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-6.0#authorizeview-component) which this component is based off of.  
 
 If you dont know what Authentication provider to use I recommend [okta](https://developer.okta.com/). \
