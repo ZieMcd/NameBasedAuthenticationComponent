@@ -59,16 +59,16 @@ INameBasedAuthorizationHelper.cs
         /// This class is used by the NameBasedAuthorizeView component
         /// This class has two methods, GetRolesForComponent and GetRolesFromRoute
         /// both should return a comma delimited list of roles that are allowed to access the component.
-        /// If a component name has been passed to the NameBasedAuthorizeView e.g. <NameBasedAuthorizeView ComponentAuthName="AdminComponent"> then
-        /// the GetRolesForComponent(string componentName) will be called if no parameter is passed in e.g. just <NameBasedAuthorizeView> then
-        ///  GetRolesFromRoute(string componentRoute) will called, componentRoute will be what ever the route of the current component is
+        /// If a component name has been passed to the NameBasedAuthorizeView e.g. <NameBasedAuthorizeView ComponentAuthName="AdminComponent">
+        /// Then the GetRolesForComponent(string componentName) will be called if no parameter is passed in e.g. just <NameBasedAuthorizeView> 
+        /// Then GetRolesFromRoute(string componentRoute) will be called, componentRoute will be what ever the route of the current component is.
         /// </summary>
 
        public interface INameBasedAuthorizationHelper
        {
            /// <summary>
-           ///  when you the NameBasedAuthorizeView component and pass the ComponentAuthName to it this
-           /// methode will be used to determine what roles should have access to that component   
+           /// When you use the NameBasedAuthorizeView component and pass the ComponentAuthName to it, this
+           /// method will be called to determine what roles should have access to that component.   
            /// </summary>
            /// <param name="componentName">
            /// The parameter will be equal to the ComponentAuthName passed into NameBasedAuthorizeView
@@ -82,7 +82,7 @@ INameBasedAuthorizationHelper.cs
            ///  This is a fallback method when ComponentAuthName is not passed to NameBasedAuthorizeView thus
            ///  the route of the component is passed to method e.g. https://localhost:7082/counter
            ///  When Implementing this I recommend injecting Microsoft.AspNetCore.Components.NavigationManger
-           /// and using .ToBaseRelativePath(String) to get the relative pass
+           ///  and using .ToBaseRelativePath(String) to get the relative pass
            /// </summary>
            /// <param name="componentRoute"></param>
            /// <returns>comma delimited list of roles that are allowed to access the component e.g. "Admin","CEO","Everyone"</returns>
@@ -123,13 +123,13 @@ INameBasedAuthorizationHelper.cs
        }
     
        public readonly record struct NavRoleItem(string Role, string UrlOrName);
-In my example I create a fake table and I query the name of a component against that fake table
+In my example I created a fake table and I queried the name of a component against that fake table.
 
-4. Now you need Add NameBasedAuthorizeComponent at startup passing in the instance of INameBaseAuthorizationHelper you created
+4. Now you need to add NameBasedAuthorizeComponent at program.cs passing in the instance of INameBaseAuthorizationHelper that you created
 
        builder.Services.AddNameBasedAuthorizeComponent<NameBasedAuthorizationHelper>();
 
-5. After all these steps your ready to use NameBasedAuthorizeViewComponent, Use it like so
+5. After all these steps you're ready to use NameBasedAuthorizeViewComponent, use it like so
 
         <NameBasedAuthorizeView ComponentAuthName="AdminComponent">
            <Authorized>
@@ -149,9 +149,9 @@ In my example I create a fake table and I query the name of a component against 
              </div>
           </NotAuthorized>
         </NameBasedAuthorizeView>
-    Because of our implementation in step 3 only users with the admin will see whats in the &lt;Authorized&gt; section if the user does not have admin role they will see whats in  &lt;/NotAuthorized>
+    Because of our implementation in step 4 only users with the admin role will see whats in the &lt;Authorized&gt; section, if the user does not have admin role they will see whats in  &lt;/NotAuthorized>
 
 ### Help and improvements 
-If you need feel free to email me at [ziemcd@gmail.com](mailto:ziemcd@gmail.com)
-If you think you can improve the nuget you can fork or create pull request
+If you need help, feel free to email me at [ziemcd@gmail.com](mailto:ziemcd@gmail.com) \
+If you think you can improve the nuget you can fork or create a pull request
     
