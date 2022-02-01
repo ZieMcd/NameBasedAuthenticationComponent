@@ -29,8 +29,9 @@ PMC:
         );
 In order to fully use the NameBasedAuthorize component you should have roles claim as part of your authentication provider. \
 
-2. Cover the content in App.razor with
-     <CascadingAuthenticationState>  
+2. Cover the content in App.razor with \<CascadingAuthenticationState>
+
+        <CascadingAuthenticationState>  
           <Router AppAssembly="@typeof(App).Assembly">
                <Found Context="routeData">
                     <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
@@ -43,13 +44,13 @@ In order to fully use the NameBasedAuthorize component you should have roles cla
                     </LayoutView>
                </NotFound>
           </Router>
-     </CascadingAuthenticationState>  
+       </CascadingAuthenticationState>  
 
-2. You also need to add NameBasedAuthorizeViewComponent.Components to _Imports.cs
+3. You also need to add NameBasedAuthorizeViewComponent.Components to _Imports.cs
 
         @using NameBasedAuthorizeViewComponent.Components
 
-3. Next thing you want to do is implement instance INameBasedAuthorizationHelper\
+4. Next thing you want to do is implement instance INameBasedAuthorizationHelper\
 INameBasedAuthorizationHelper.cs
 
        namespace NameBasedAuthorizeViewComponent.Interfaces;
