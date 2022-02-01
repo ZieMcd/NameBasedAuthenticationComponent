@@ -6,8 +6,8 @@ I assume that you already have a basic understanding of authentication and autho
 I also recommend reading the documentation on Microsoft's [AuthorizeView component](https://docs.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-6.0#authorizeview-component) which this component is based off of.  
 
 If you dont know what Authentication provider to use I recommend [okta](https://developer.okta.com/). \
-[Here is good](https://www.youtube.com/watch?v=GilJ29cPJAs&ab_channel=OktaDev) video is good for showing how to set up okta in blazor project. \
-Around 13 mins into [this](https://youtu.be/Cej_u3fb9rI?t=783) video it shows you how to get role claim from okta
+[Here is a good video](https://www.youtube.com/watch?v=GilJ29cPJAs&ab_channel=OktaDev) for showing how to set up okta in blazor project. \
+Around 13 mins into [this](https://youtu.be/Cej_u3fb9rI?t=783) video it shows you how to get roles as claim from okta.
 
 ## Installation
 
@@ -22,13 +22,28 @@ PMC:
 ## Usage
 
 
-1. The first thing you need to do is add AddAuthentication to your project you do this in program.cs
+1. The first thing you need to do is add Authentication to your project you do this in program.cs
 
         builder.Services.AddAuthentication(
         //You need set up your Authentication provider here
         );
-In order to fully use NameBasedAuthorize component you should have roles claim as part of your authentication provider \
-right note on cascading on app.razor\
+In order to fully use the NameBasedAuthorize component you should have roles claim as part of your authentication provider. \
+
+2. Cover the content in App.razor with
+     <CascadingAuthenticationState>  
+          <Router AppAssembly="@typeof(App).Assembly">
+               <Found Context="routeData">
+                    <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
+                    <FocusOnNavigate RouteData="@routeData" Selector="h1"/>
+               </Found>
+               <NotFound>
+                    <PageTitle>Not found</PageTitle>
+                    <LayoutView Layout="@typeof(MainLayout)">
+                    <p role="alert">Sorry, there's nothing at this address.</p>
+                    </LayoutView>
+               </NotFound>
+          </Router>
+     </CascadingAuthenticationState>  
 
 2. You also need to add NameBasedAuthorizeViewComponent.Components to _Imports.cs
 
