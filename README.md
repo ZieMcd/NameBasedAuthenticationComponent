@@ -125,11 +125,11 @@ INameBasedAuthorizationHelper.cs
        public readonly record struct NavRoleItem(string Role, string UrlOrName);
 In my example I create a fake table and I query the name of a component against that fake table
 
-4. Now you need Add NameBasedAuthorizeComponent at startup passing in the instance of INameBaseAuthorizationHelper you created
+5. Now you need Add NameBasedAuthorizeComponent at startup passing in the instance of INameBaseAuthorizationHelper you created
 
        builder.Services.AddNameBasedAuthorizeComponent<NameBasedAuthorizationHelper>();
 
-5. After all these steps your ready to use NameBasedAuthorizeViewComponent, Use it like so
+6. After all these steps your ready to use NameBasedAuthorizeViewComponent, Use it like so
 
         <NameBasedAuthorizeView ComponentAuthName="AdminComponent">
            <Authorized>
