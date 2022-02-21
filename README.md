@@ -9,6 +9,8 @@ If you dont know what Authentication provider to use I recommend [okta](https://
 [Here is a good video](https://www.youtube.com/watch?v=GilJ29cPJAs&ab_channel=OktaDev) for showing how to set up okta in blazor project. \
 Around 13 mins into [this](https://youtu.be/Cej_u3fb9rI?t=783) video it shows you how to get roles as claim from okta.
 
+Also note the example bellow is using blazor server side
+
 ## Installation
 
 PMC:
