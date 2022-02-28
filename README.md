@@ -19,7 +19,7 @@ PMC:
 
 .NET CLI:
 
-    dotnet add package iemcd.Authorization.NameBasedAuthorizeViewComponent
+    dotnet add package Ziemcd.Authorization.NameBasedAuthorizeViewComponent
 
 ## Usage
 
