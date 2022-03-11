@@ -1,5 +1,5 @@
 # NameBasedAuthorizeViewComponent
-NameBasedAuthorizeView is an alternative to Microsoft's AuthorizeView. It allows for even more control over what roles can access a component.
+NameBasedAuthorizeView is an alternative to Microsoft's AuthorizeView. It allows for even more control over what roles can access a component. It lets you implement what roles have access to components based the components name
 
 ### Before We begin
 I assume that you already have a basic understanding of authentication and authorization in dotnet and blazor when using this nuget if not I recommend reading the [microsoft docs](https://docs.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-6.0).
@@ -29,7 +29,7 @@ PMC:
         builder.Services.AddAuthentication(
         //You need set up your Authentication provider here
         );
-In order to fully use the NameBasedAuthorize component you should have roles claim as part of your authentication provider. \
+In order to fully use the NameBasedAuthorize component you should have roles claim as part of your authentication provider. 
 
 2. Cover the content in App.razor with \<CascadingAuthenticationState>
 
