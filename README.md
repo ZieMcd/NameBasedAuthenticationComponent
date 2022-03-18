@@ -140,7 +140,7 @@ In my example I created a fake table and I queried the name of a component again
                <div class="card-body">
                   <p class="card-text">You are Authorized to view Admin Component</p>
                </div>
-          </div>
+            </div>
           </Authorized>
           <NotAuthorized>
           <div class="card text-white bg-danger  mb-3" style="max-width: 18rem;">
