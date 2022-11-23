@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <PackageId>Ziemcd.Authorization.NameBasedAuthorizeViewComponent</PackageId>
@@ -12,6 +11,8 @@
         <PackageIconUrl>https://www.clipartmax.com/png/full/211-2118696_purple-lock-icon.png</PackageIconUrl>
         <RepositoryUrl>https://github.com/ZieMcd/NameBasedAuthenticationComponent</RepositoryUrl>
         <PackageTags>Blazor, Authorization</PackageTags>
+        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+        <LangVersion>11</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
